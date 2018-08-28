@@ -5,3 +5,4 @@ Created this project just for practice purpose
 1. Graph . - BFS / DFS / topological search  / MST 
 2. Shortest distance . - Dijekstra Algo 
 3. DS   - Stack 
+4. Tree - traversal / find / delete / insert
