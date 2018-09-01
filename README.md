@@ -1,10 +1,18 @@
 # DataStructure-Algos
-Created this project just for practice purpose 
+Practice purpose Only. 
 
-# What is available.
-1. Graph . - BFS / DFS / topological search  / MST 
-2. Shortest distance . - Dijekstra Algo 
-3. DS   - Stack , DisjointSet (union-find())
-4. Tree - traversal / find / delete / insert
-5. Algo --> Kruskal Algo 
+# Available Code.
+
+1. Shortest distance Algo. - 
+	Dijekstra Algo 
+	Kruskal Algo 
+
+2. DS 
+	Stack , 
+	DisjointSet (union-find()), 
+	Tree - traversal / find / delete / insert , 
+	Graph (DFS, BFS , Topological search , MST)
+
+
+	
 
