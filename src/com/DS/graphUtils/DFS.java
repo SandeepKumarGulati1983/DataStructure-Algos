@@ -7,12 +7,12 @@ public class DFS {
 	Graph graph;
 	Stack stack; // FIFO
 
-	DFS(Graph graph) {
+	public DFS(Graph graph) {
 		this.graph = graph;
 		stack = new Stack();
 	}
 
-	void run() {
+	public void run() {
 
 		Vertics startingVertics = graph.verticsList.get(0);
 		dfs(startingVertics);
@@ -44,7 +44,7 @@ public class DFS {
 		for (int i = 0; i < graph.nVertics; i++) {
 
 			v1 = graph.verticsList.get(i);
-			if (graph.adjecentMatrix[v.index][v1.index] == 1 && v1.wasVisited == false) {
+			if (graph.adjecentMatrix[v.index][v1.index] > 0 && v1.wasVisited == false) {
 				v1.wasVisited = true;
 
 				return v1.index;

@@ -10,7 +10,7 @@ import com.DS.graphUtils.Vertics;
 public class KruskalAlgo {
 
 	/*
-	 * -------as per Joe and Eva ----------------------- Suppose , we want that in a
+	 * -------as per Jone and Eva ----------------------- Suppose , we want that in a
 	 * particular graph when ever a new edge will be added in between a pair of
 	 * vertices then instead of re-computing the distance from the start , we
 	 * develop a Union-find kind of data structure , which will store the
@@ -60,6 +60,15 @@ public class KruskalAlgo {
 	 * 
 	 * Step3:-do this till v-1 iterations. =================
 	 * 
+	 * 
+	 * IMPROVMENT AREAS =========== finding MST is not Kruskal prime intension ,
+	 * prime intension is fast update and search in a forest of tree
+	 * 
+	 * So Needed tree and forest concept also . in bookish language , need multiple
+	 * disjoint set and there array
+	 * 
+	 * Forest = [Set0, Set1, ------, Sn ] or [tree0, Tree1 , Tree3 ---- Tree N ]
+	 * https://www.geeksforgeeks.org/count-number-trees-forest/
 	 * 
 	 */
 
@@ -160,9 +169,6 @@ public class KruskalAlgo {
 		int parent, rank;
 	};
 
-	int V, E; // V-> no. of vertices & E->no.of edges
-	Edge edge[]; // collection of all edges
-
 	int find(subset subsets[], int i) {
 		// find root and make root as parent of i (path compression)
 		if (subsets[i].parent != i)
@@ -171,8 +177,6 @@ public class KruskalAlgo {
 		return subsets[i].parent;
 	}
 
-	// A function that does union of two sets of x and y
-	// (uses union by rank)
 	void Union(subset subsets[], int x, int y) {
 		int xroot = find(subsets, x);
 		int yroot = find(subsets, y);

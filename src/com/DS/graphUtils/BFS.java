@@ -44,7 +44,7 @@ public class BFS {
 	private int getAdjacent(Vertics v) {
 
 		for (int i = 0; i < graph.verticsList.size(); i++) {
-			if (graph.adjecentMatrix[v.index][i] == 1 && graph.verticsList.get(i).wasVisited == false) {
+			if (graph.adjecentMatrix[v.index][i] > 0 && graph.verticsList.get(i).wasVisited == false) {
 				graph.verticsList.get(i).wasVisited = true;
 				return i;
 			}

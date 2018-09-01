@@ -32,6 +32,11 @@ public class Graph {
 		// adjecentMatrix[v2][v1] = 1; // if commented means directional graph
 	}
 
+	public void addEdgeWithWeight(int v1, int v2, int weight) { // no weight over edge here
+		adjecentMatrix[v1][v2] = weight;
+		// adjecentMatrix[v2][v1] = weight; // if commented means directional graph
+	}
+	
 	public void addEdgesObject(Edge e) {
 		this.edge = e; // for priority queue
 		edgeArray.add(e);
